@@ -1,6 +1,6 @@
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Animation from './components/animation'
+import Animation from './components/Animation'
 import './globals.css'
 import { Roboto } from 'next/font/google'
 
