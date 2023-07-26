@@ -1,5 +1,6 @@
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Animation from './components/animation'
 import './globals.css'
 import { Roboto } from 'next/font/google'
 
@@ -14,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`bg-[#101010] text-white ${roboto.className}`}>
-        <Header />
-        {children}
-        <Footer />
+        <Animation>
+          <Header />
+          {children}
+          <Footer />
+        </Animation>
         </body>
     </html>
   )
