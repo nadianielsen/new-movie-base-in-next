@@ -42,9 +42,9 @@ const BannerHome = () => {
 
     return loading ? <BannerLoading /> : ( 
         <Link href={`/${featured.id}`} >
-            <div className="w-full h-[20rem] bg-gradient-to-t from-[#101010] via-transparent to-[#101010] relative flex justify-center">
-                <Image src={`https://image.tmdb.org/t/p/original${backdrop?.file_path}`} alt="Banner with different movies" className="w-full h-full absolute -z-10 object-cover" width={1000} height={1000} />  
-                <h2 className="absolute bottom-0 px-3 py-12 text-lg font-medium">{featured?.title}</h2> 
+            <div className="w-full h-[20rem] lg:h-[42rem] bg-gradient-to-t from-[#101010] via-transparent to-[#101010] relative flex justify-center">
+                <Image src={`https://image.tmdb.org/t/p/original${backdrop?.file_path}`} alt={backdrop?.title} className="w-full h-full absolute -z-10 object-cover" width={1000} height={1000} />  
+                <h2 className="absolute bottom-0 px-3 py-12 lg:py-24 text-lg lg:text-2xl font-medium">{featured?.title}</h2> 
 
             </div>
         </Link>

@@ -8,12 +8,18 @@ const outfit = Outfit({ subsets: ['latin-ext'], weight: ["100", "200", "300", "4
 const Header = () => {
 
     return ( 
-        <header className="bg-transparent w-full h-16 flex z-40 items-center justify-between px-3">
+        <header className="bg-transparent w-full h-16 flex z-40 items-center justify-between lg:justify-around px-3">
             <Link href={"/"} className={`text-3xl font-medium uppercase  ${outfit.className}`}>Logo</Link>
             <div className="hidden lg:block">
                 <Navigation />
             </div>
             <Link href={"/search"}><BiSearch className="text-[1.7rem]"/></Link>
+            {/* <div className="flex gap-x-5 items-center">
+                <Link href={"/search"}><BiSearch className="text-[1.7rem]"/></Link>
+                <div className="border-2 rounded-full p-1">
+                    <div className="w-6 h-6 lg:w-8 lg:h-8 bg-white rounded-full"></div>
+                </div>
+            </div> */}
         </header>
      );
 }
