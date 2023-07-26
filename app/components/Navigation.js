@@ -11,9 +11,9 @@ const Navigation = () => {
 
     return ( 
         <nav className="text-white text-sm flex justify-between py-2.5 px-5">
-            <Link href={"/"} className={navlink == "/" ? "text-white" : "text-neutral-400"}><BiHomeAlt2 className=""/>Home</Link>
-            <Link href={"/movies"} className={navlink == "/movies" ? "text-white" : "text-neutral-400"}><PiFilmReel className=""/>Movies</Link>
-            <Link href={"/tvseries"} className={navlink == "/tvseries" ? "text-white" : "text-neutral-400"}><PiTelevisionSimple className=""/>Tv series</Link>
+            <Link href={"/"} className={navlink == "/" ? "text-white font-medium" : "text-neutral-300"}><BiHomeAlt2 className="mx-2 text-lg"/>Home</Link>
+            <Link href={"/movies"} className={navlink == "/movies" ? "text-white font-medium" : "text-neutral-300"}><PiFilmReel className="mx-3 text-lg"/>Movies</Link>
+            <Link href={"/tvseries"} className={navlink == "/tvseries" ? "text-white font-medium" : "text-neutral-300"}><PiTelevisionSimple className="mx-5 text-lg"/>Tv series</Link>
         </nav>
      );
 }
