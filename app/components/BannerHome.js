@@ -44,9 +44,9 @@ const BannerHome = () => {
 
     return loading ? <BannerLoading /> : ( 
         <Link href={`/${featured.id}`} >
-            <div className="w-full h-[20rem] lg:h-[42rem] bg-gradient-to-t from-[#101010] via-transparent to-[#101010] relative flex justify-center lg:justify-start">
+            <div className="w-full h-[20rem] lg:h-[42rem] bg-gradient-to-t from-[#101010] via-transparent to-[#101010] relative flex justify-center lg:justify-start items-end">
                 <Image src={`https://image.tmdb.org/t/p/original${backdrop?.file_path}`} alt={backdrop?.title} className="w-full h-full absolute -z-10 object-cover" width={1000} height={1000} />
-                <div className="absolute bottom-0 px-3 py-12 lg:py-24">
+                <div className="py-6">
                     <h2 className="text-lg lg:text-3xl font-medium">{featured?.title}</h2> 
                     <div className="flex flex-col md:flex-row mx-14 md:mx-0 gap-x-3 ">
                         <p className="flex py-2 mx-8 md:mx-0 gap-x-2">{featured?.vote_average}<AiFillStar className="text-yellow-500 my-0.5 text-lg"/></p>      
