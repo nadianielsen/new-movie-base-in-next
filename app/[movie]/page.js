@@ -1,8 +1,6 @@
-"use client"
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai"
 import Genres from "../components/Genres";
-import { useState } from "react";
 
 const getMovie = async (movie) => {
    
@@ -19,23 +17,22 @@ const getMovie = async (movie) => {
 
 const Movie = async ({ params: {movie}}) => {
 
-    const imagePath = "http://image.tmdb.org/t/p/original"
-    
     const movies = await getMovie(movie)
     console.log(movies)
 
+    const imagePath = "http://image.tmdb.org/t/p/original"
+
     const year = new Date(movies.release_date).getFullYear()
-    
+
     const hours = Math.floor(movies.runtime / 60)
     const minutes = movies.runtime % 60;
-    
-    
+
 
     return ( 
         <main>
                 {movies && (
                 <article>
-                    <div className="w-full h-[20rem] md:h-[30rem] relative bg-gradient-to-t from-neutral-900 to-transparent">
+                    <div className="w-full h-[20rem] relative bg-gradient-to-t from-neutral-900 to-transparent">
                         <Image src={imagePath + movies.backdrop_path} width={800} height={800} className="absolute w-full h-full object-cover -z-10" alt={movies.id}/>
                     </div>
                     <article className="relative bottom-12 px-2 grid gap-y-2">
@@ -46,7 +43,7 @@ const Movie = async ({ params: {movie}}) => {
                             <p>{hours + "h " + minutes + "min"}</p>
                         </div>
                         <p className="text-sm">{movies.overview}</p>
-                        <Genres genres={movies.genres}/>    
+                        <Genres genres={movies.genres}/>
                     </article>
                 </article>
                 )
@@ -56,4 +53,3 @@ const Movie = async ({ params: {movie}}) => {
 }
  
 export default Movie;
-
