@@ -11,7 +11,7 @@ const Navigation = () => {
 
     return ( 
         <nav className="text-white text-sm flex justify-between py-2.5 px-5 lg:gap-x-20">
-            <Link href={"/"} className={navlink == "/" ? "text-white font-medium lg:border-b-2" : "text-neutral-300"}><BiHomeAlt2 className="mx-2 text-lg lg:hidden"/>Home</Link>
+            <Link href={"/"} className={navlink == "/" ? "text-white font-medium lg:border-b-2 " : "text-neutral-300"}><BiHomeAlt2 className="mx-2 text-lg lg:hidden"/>Home</Link>
             <Link href={"/movies"} className={navlink == "/movies" ? "text-white font-medium lg:border-b-2" : "text-neutral-300"}><PiFilmReel className="mx-3 text-lg lg:hidden"/>Movies</Link>
             <Link href={"/tvseries"} className={navlink == "/tvseries" ? "text-white font-medium lg:border-b-2" : "text-neutral-300"}><PiTelevisionSimple className="mx-5 text-lg lg:hidden"/>Tv series</Link>
         </nav>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai"
 import Genres from "../components/Genres";
+import Cast from "../components/Cast";
 
 const getMovie = async (movie) => {
    
@@ -32,7 +33,7 @@ const Movie = async ({ params: {movie}}) => {
         <main>
                 {movies && (
                 <article>
-                    <div className="w-full h-[20rem] relative bg-gradient-to-t from-neutral-900 to-transparent">
+                    <div className="w-full h-[26rem] relative bg-gradient-to-t from-neutral-900 to-transparent">
                         <Image src={imagePath + movies.backdrop_path} width={800} height={800} className="absolute w-full h-full object-cover -z-10" alt={movies.id}/>
                     </div>
                     <article className="relative bottom-12 px-2 grid gap-y-2">
@@ -44,6 +45,7 @@ const Movie = async ({ params: {movie}}) => {
                         </div>
                         <p className="text-sm">{movies.overview}</p>
                         <Genres genres={movies.genres}/>
+                        <Cast cast={movies.casts}/>
                     </article>
                 </article>
                 )
