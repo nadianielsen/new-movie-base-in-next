@@ -18,9 +18,9 @@ const Footer = () => {
                     <Link href={"/"} className="border-b hover:border-0">Contact us</Link>
                 </article>
                 <article className="flex gap-x-6 text-xl justify-center items-center">
-                    <Link href={"/"} className="hover:text-blue-500"><FaFacebookF /></Link>
-                    <Link href={"/"} className="hover:text-cyan-400"><FaTwitter /></Link>
-                    <Link href={"/"} className="hover:text-pink-500"><FaInstagram /></Link>
+                    <Link href={"/"} className="hover:text-blue-400"><FaFacebookF /></Link>
+                    <Link href={"/"} className="hover:text-blue-400"><FaTwitter /></Link>
+                    <Link href={"/"} className="hover:text-blue-400"><FaInstagram /></Link>
                 </article>
                 <h2 className="row-start-3 justify-self-center self-start text-neutral-400"> &copy;Copyright - {year} </h2>
             </article>

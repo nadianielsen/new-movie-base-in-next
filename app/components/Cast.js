@@ -2,10 +2,11 @@
 
 const Cast = ({ cast }) => {
     return (
-        <article>
+        <article className="flex gap-x-4">
+            <h2 className="font-medium text-xs lg:text-sm">Cast:</h2>
             {cast?.map((actor, index) => {
-                if (index < 4) return (
-                    <h2 className="text-neutral-200 text-center">{actor.name}</h2>
+                if (index < 6) return (
+                    <p className="text-xs lg:text-sm">{actor.name}</p>
                 )
             })}
         </article>
