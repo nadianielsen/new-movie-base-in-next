@@ -1,9 +1,8 @@
 
 
-const TvSeries = () => {
+const TvSeries = (featured) => {
     return ( 
         <main>
-            
         </main>
      );
 }
